@@ -2,6 +2,9 @@
 /**
  * Label inflection for custom post types
  *
+ * @param $term
+ * @param string $plural
+ * @return array
  */
 function cpt_inflection( $term, $plural = '' ) {
 	$u = ucfirst( $term );
@@ -22,6 +25,9 @@ function cpt_inflection( $term, $plural = '' ) {
 /**
  * Label inflection for custom taxonomies
  *
+ * @param string $str
+ * @param string $plural
+ * @return array
  */
 function tax_inflection( $str = '', $plural = '' ) {
 	$p = strlen( $plural ) ? $plural : $str . 's';
